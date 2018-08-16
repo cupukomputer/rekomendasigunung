@@ -1,0 +1,16 @@
+{
+  "name": "gunung",
+  "version": "1.0.0",
+  "description": "gunung",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@chenfengyuan/datepicker": "^1.0.0-beta",
+    "admin-lte": "^3.0.0-alpha.2",
+    "lightbox2": "^2.10.0"
+  }
+}

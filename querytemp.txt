@@ -1,0 +1,12 @@
+SELECT gunung.nama_gunung,dkharga.murah,dkfasilitas.sedang,dkjamoperasional.lama, 
+@dk1 :=if(dkharga.murah>dkfasilitas.sedang,dkfasilitas.sedang,dkharga.murah) as dk1,
+@dk :=if(@dk1>dkjamoperasional.lama,dkjamoperasional.lama,@dk1) as dk2
+
+
+FROM gunung 
+JOIN dkharga ON dkharga.gunung_id=gunung.id 
+JOIN dkfasilitas on dkfasilitas.gunung_id=gunung.id 
+JOIN dkjamoperasional on dkjamoperasional.gunung_id=gunung.id 
+
+
+ORDER by dk2 DESC
